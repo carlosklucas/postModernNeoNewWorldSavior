@@ -4,6 +4,10 @@ class InitialScreen {
     this.y = height
   }
 
+  setup() {
+    
+  }
+
   draw() {
     this._background()
     this._text()
