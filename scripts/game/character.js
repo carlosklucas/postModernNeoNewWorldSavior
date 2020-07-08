@@ -10,6 +10,7 @@ class Character extends Animation {
    this.gravity = 6;
    this.jumpHeight = -50;
    this.jumps = 0;
+   this.invencible = false
  }
   
   jump() {
@@ -30,16 +31,25 @@ class Character extends Animation {
    
   }
   
+  remainsInvencible() {
+    this.invencible = true;
+    //remains 1 sec invencible
+    setTimeout(() => {
+      this.invencible = false
+    }, 1000)
+  }
+  
+
   isHitting(enemy) {
+    //if true, then the character has been hit and we jump out of this verification, return false
+    if(this.invencible) {
+    return false;
+    }
 
     const precision = 0.8
-    noFill()
-    rect(this.x, this.y, this.width * precision,
-                                    this.height * precision)
-    rect(enemy.x,
-                                    enemy.y,
-                                    enemy.widthC * precision,
-                                    enemy.heightC * precision)
+    //noFill()
+    //rect(this.x, this.y, this.width * precision, this.height * precision)
+    //rect(enemy.x, enemy.y, enemy.widthC * precision, enemy.heightC * precision)
     
     const colision = collideRectRect(this.x,
                                     this.y,

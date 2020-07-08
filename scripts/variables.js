@@ -6,10 +6,10 @@ let imageCop;
 let imageSardine;
 let imageGameOver;
 let imageInitialScreen;
+let imageLive;
 let fontInitialScreen;
 let game;
-
-
+let tape;  
 
 let scenario;
 let gameSound;
@@ -24,15 +24,17 @@ let score;
 let currentScreen = 'initialScreen';
 let scenes;
 let buttonManagement;
+let live;
 
 const matrixSardine = [
   [0, 0],
-  [204, 0],
-  [0, 77],
-  [204, 77],
-  [0, 154],
-  [204, 154],
-  [0, 231],
+  [203, 0],
+  [0, 142],
+  [203, 142],
+  [0, 284],
+  [203, 284],
+  [0, 426],
+  [203, 426],
 ]
 
 const matrixCop = [
@@ -49,7 +51,7 @@ const matrixCop = [
 const matrixStatue = [
   [0, 0],
   [116, 0],
-  [232,0],
+  [232, 0],
   [348, 0],
   ]
 
@@ -70,18 +72,20 @@ const matrixCovid = [
   [280, 858],
   [560, 858],
   [840, 858],
-]
-
+]  
 const matrixCharacter = [
       [0, 0],
-      [29, 0],
-      [58, 0],
-      [0, 51],
-      [29, 51],
-      [58, 51],
-      [0, 102],
-      [29, 102],
-      [58, 102],
+      [73, 0],
+      [146, 0],
+      [219, 0],
+      [292, 0],
+      [0, 166],
+      [73, 166],
+      [146, 166],
+      [219, 166],
+      [292, 166],
 ] 
+
+//const matrixCharacter = [ [0, 0],[29, 0],[58, 0],[0, 51],[29, 51],[58, 51],[0, 102],[29, 102],[58, 102],] 
 
 const enemies = []

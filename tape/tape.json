@@ -1,0 +1,27 @@
+{
+  "configs": {
+    "maxLives": 5,
+    "initialLives":5
+  },
+  "mapGame": [{
+      "enemy": 0,
+      "velocity": 10
+      },
+      {
+      "enemy": 2,
+      "velocity": 15
+      },
+      {
+      "enemy": 1,
+      "velocity": 25
+      },
+      {
+      "enemy": 2,
+      "velocity": 15
+      },
+      {
+      "enemy": 3,
+      "velocity": 10
+      }
+    ]
+}

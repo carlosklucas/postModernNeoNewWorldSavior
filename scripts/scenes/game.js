@@ -1,18 +1,23 @@
 class Game {
   constructor() {
-    this.currentEnemy = 0;
+    this.index = 0;
+    
+    this.mapGame = tape.mapGame;
   }
 
   setup() {
     scenario = new Scenario(imageScenario, 3);
     score = new Score();
+    live = new Live(tape.configs.maxLives, tape.configs.initialLives);
     
-    character = new Character(matrixCharacter, imageCharacter, 0, 30, 58, 135, 29, 51);
+    //character = new Character(matrixCharacter, imageCharacter, 0, 30, 58, 135, 29, 51);
+    //constructor(matrix, image, x, floorVariationY, widthC, heightC, widthSprite, heightSprite)
+    character = new Character(matrixCharacter, imageCharacter, 0, 30, 73, 166, 73, 166);
     //ver constructor da classe (módulo) inimigo
-    const covid = new Enemy(matrixCovid, imageCovid, width - 280, 30, 70, 72, 280, 286, 10, 10);
-    const statue = new Enemy(matrixStatue, imageStatue, width - 119, 30, 58, 144, 116, 287, 10, 10);
-    const cop = new Enemy(matrixCop, imageCop, width, 30, 58, 144, 685, 1210, 10, 10);
-    const sardine = new Enemy(matrixSardine, imageSardine, width, 200, 51, 36, 204, 77, 10, 10);
+    const covid = new Enemy(matrixCovid, imageCovid, width - 280, 30, 70, 72, 280, 286, 10);
+    const statue = new Enemy(matrixStatue, imageStatue, width - 119, 30, 58, 144, 116, 287, 10);
+    const cop = new Enemy(matrixCop, imageCop, width, 30, 58, 144, 685, 1210, 10);
+    const sardine = new Enemy(matrixSardine, imageSardine, width, 50, 68, 47, 203, 142, 10);
 
     enemies.push(covid)
     enemies.push(statue)
@@ -36,25 +41,39 @@ class Game {
     character.applyGravity();
     score.show();
     score.addPoints();
+    live.draw();
 
-    const enemy = enemies[this.currentEnemy];
+    const currentRow = this.mapGame[this.index]
+    const enemy = enemies[currentRow.enemy];
+    
+    //there's no need to use the delay anymor
+    //const visibleEnemy = enemy.x < -enemy.widthC;
     const visibleEnemy = enemy.x < -enemy.widthC;
 
+    enemy.velocity = currentRow.velocity;
     enemy.show()
     enemy.move()
 
+
     if (visibleEnemy) {
-      this.currentEnemy++;
-      if (this.currentEnemy > 3) {
-        this.currentEnemy = 0;
+      this.index++;
+      enemy.appear()
+      if (this.index > this.mapGame.length -1) {
+        this.index = 0;
       }
+      
       // parseInt, random gives 10.1
-      enemy.velocity = parseInt(random(10, 20));
+      //enemy.velocity = parseInt(random(10, 20));
     }
 
     if (character.isHitting(enemy)) {
+      live.loseLives();
+      if(live.lives <= 0) {
       image(imageGameOver, width / 2 - 200, height / 3)
-      noLoop()
+      noLoop()  
+      }
+       
+      character.remainsInvencible()
     }
   }
 }

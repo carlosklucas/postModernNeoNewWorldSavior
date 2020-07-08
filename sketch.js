@@ -8,12 +8,12 @@ function setup() {
     game
   };
   game.setup();
-  buttonManagement = new ButtonManagement('Game Start', width / 2, height / 2);
+  buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
   
 frameRate(30)
-  //gameSound.loop();
+gameSound.loop();
 }
-
+  
 function keyPressed() {
   game.keyPressed(key);
 }
