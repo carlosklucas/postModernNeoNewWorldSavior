@@ -11,13 +11,13 @@ class Game {
     live = new Live(tape.configs.maxLives, tape.configs.initialLives);
     
     //character = new Character(matrixCharacter, imageCharacter, 0, 30, 58, 135, 29, 51);
-    //constructor(matrix, image, x, floorVariationY, widthC, heightC, widthSprite, heightSprite)
-    character = new Character(matrixCharacter, imageCharacter, 0, 30, 73, 166, 73, 166);
+    character = new Character(matrixCharacter, imageCharacter, 0, 30, 130, 186, 73, 166);
     //ver constructor da classe (módulo) inimigo
+    //  constructor(matrix, image, x, floorVariationY, widthC, heightC, widthSprite, heightSprite, velocity) 
     const covid = new Enemy(matrixCovid, imageCovid, width - 280, 30, 70, 72, 280, 286, 10);
     const statue = new Enemy(matrixStatue, imageStatue, width - 119, 30, 58, 144, 116, 287, 10);
     const cop = new Enemy(matrixCop, imageCop, width, 30, 58, 144, 685, 1210, 10);
-    const sardine = new Enemy(matrixSardine, imageSardine, width, 50, 68, 47, 203, 142, 10);
+    const sardine = new Enemy(matrixSardine, imageSardine, width, 300, 68, 47, 203, 142, 10);
 
     enemies.push(covid)
     enemies.push(statue)
@@ -32,6 +32,20 @@ class Game {
       character.jump()
       jumpSound.play();
     }
+        if (key === 'ArrowRight') {
+      console.log('Went to the right!!!')
+      character.right()
+      jumpSound.play();
+    }
+        if (key === 'ArrowLeft') {
+      console.log('Went to the right!!!')
+      character.left()
+      jumpSound.play();
+    }
+    
+    if (sardine.appear()) {
+     flyingSardineSound.play() 
+    }
   }
 
   draw() {
@@ -41,7 +55,7 @@ class Game {
     character.applyGravity();
     score.show();
     score.addPoints();
-    live.draw();
+    live.draw()
 
     const currentRow = this.mapGame[this.index]
     const enemy = enemies[currentRow.enemy];

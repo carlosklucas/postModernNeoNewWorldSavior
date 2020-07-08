@@ -9,7 +9,9 @@ let imageInitialScreen;
 let imageLive;
 let fontInitialScreen;
 let game;
-let tape;  
+let tape;
+let welcomeSound;
+let flyingSardineSound;
 
 let scenario;
 let gameSound;

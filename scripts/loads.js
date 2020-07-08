@@ -13,5 +13,8 @@ function preload() {
   tape = loadJSON('tape/tape.json');
   
   gameSound = loadSound('sounds/gameSoundMalhao.mp3');
-  jumpSound = loadSound('sounds/yahoo.mp3');
+  welcome = loadSound('sounds/welcome.mp3');
+  flyingSardineSound = loadSound('sounds/flyingSardine.mp3');
+  jumpSound = loadSound('sounds/jump.mp3');
+  
 }

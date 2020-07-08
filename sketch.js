@@ -11,7 +11,8 @@ function setup() {
   buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
   
 frameRate(30)
-gameSound.loop();
+//gameSound.loop();
+  //welcome.play();
 }
   
 function keyPressed() {

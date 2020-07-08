@@ -10,6 +10,8 @@ class Character extends Animation {
    this.gravity = 6;
    this.jumpHeight = -50;
    this.jumps = 0;
+   this.rightP = 0;
+   this.rightWidth = 10;
    this.invencible = false
  }
   
@@ -19,7 +21,14 @@ class Character extends Animation {
     this.jumps++
     }
   }
-  
+  right() {
+   this.rightP = this.rightWidth;
+    this.x = this.x + this.rightP;
+  }
+  left() {
+   this.rightP = this.rightWidth;
+    this.x = this.x - this.rightP;
+  }
   applyGravity(){
     this.y = this.y + this.jumpVelocity;
     this.jumpVelocity = this.jumpVelocity + this.gravity;
