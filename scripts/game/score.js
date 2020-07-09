@@ -13,7 +13,14 @@ class Score {
   
   addPoints() {
     // if I didn't have a ParseInt, there would be float numbers
+<<<<<<< HEAD
    this.points = this.points + 0.2
+=======
+   
+
+    
+    this.points = this.points + 0.2
+>>>>>>> addIntro
   }
   
 }

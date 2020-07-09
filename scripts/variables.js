@@ -12,6 +12,10 @@ let game;
 let tape;
 let welcomeSound;
 let flyingSardineSound;
+<<<<<<< HEAD
+=======
+let gameIntro;
+>>>>>>> addIntro
 
 let scenario;
 let gameSound;
@@ -26,6 +30,10 @@ let score;
 let currentScreen = 'initialScreen';
 let scenes;
 let buttonManagement;
+<<<<<<< HEAD
+=======
+let buttonIntro;
+>>>>>>> addIntro
 let live;
 
 const matrixSardine = [
