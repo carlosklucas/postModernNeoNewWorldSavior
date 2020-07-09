@@ -1,23 +1,22 @@
 // função executada apenas uma vez antes do jogo
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
   initialScreen = new InitialScreen();
+  intro = new Intro();
   game = new Game();
-  gameIntro = new Intro();
-  gameIntro.hide()
-
+  
+  scenes = {
+    intro,
+    initialScreen,
+    game
+  };
   //game.setup();
-//initialScreen.setup();
+  initialScreen.setup()
   buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
   
-frameRate(30)
-//gameSound.loop();  
-scenes = {
-  intro,
-  initialScreen,
-  game
-  };
+frameRate(20)
+//gameSound.loop();
+  //welcome.play();
 }
   
 function keyPressed() {

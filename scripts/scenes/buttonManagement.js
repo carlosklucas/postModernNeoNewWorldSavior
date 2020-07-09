@@ -17,13 +17,10 @@ class ButtonManagement {
   }
   
   changeScene() {
-    this.buttonM.remove();
-    currentScreen = 'intro';
-    //intro.setup();
-        
-
-
+    this.buttonM.remove()
+    currentScreen = 'intro'
+    gameSound.stop();
+    //game.setup()
     welcome.stop();
-
   }
 }
