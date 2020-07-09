@@ -1,6 +1,7 @@
 class Game {
   constructor() {
     this.index = 0;
+    //this.score = score;
     
     this.mapGame = tape.mapGame;
   }
@@ -24,7 +25,7 @@ class Game {
     enemies.push(cop)
     enemies.push(sardine)
     
-    //gameSound.loop();
+    gameSound.loop();
     
         if (sardine.appear()) {
      flyingSardineSound.play() 
@@ -86,9 +87,11 @@ class Game {
 
     
     if (character.isHitting(enemy)) {
+
       live.loseLives();
       if(live.lives <= 0) {
       image(imageGameOver, width / 2 - 200, height / 3)
+      gameSound.stop();
       noLoop()  
       }
        

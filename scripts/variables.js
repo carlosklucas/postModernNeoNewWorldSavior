@@ -27,6 +27,7 @@ let score;
 let currentScreen = 'initialScreen';
 let scenes;
 let buttonManagement;
+let buttonIntro;
 let live;
 
 const matrixSardine = [

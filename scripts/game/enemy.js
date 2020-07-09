@@ -19,4 +19,8 @@ class Enemy extends Animation {
     this.x = width;
   }
   
+  enemyImage(){
+   this.image = this.image; 
+  }
+  
 }

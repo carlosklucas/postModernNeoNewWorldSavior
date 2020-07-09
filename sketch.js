@@ -13,8 +13,9 @@ function setup() {
   //game.setup();
   initialScreen.setup()
   buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
+  buttonIntro = new ButtonManagement('Skip intro', width/14, height/2);
   
-frameRate(20)
+frameRate(40)
 //gameSound.loop();
   //welcome.play();
 }
