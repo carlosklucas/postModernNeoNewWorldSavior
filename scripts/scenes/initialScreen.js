@@ -3,12 +3,6 @@ class InitialScreen {
     this.x = width / 2;
     this.y = height
   }
-<<<<<<< HEAD
-
-  setup() {
-    
-  }
-=======
   
   setup() {
   welcome.loop()
@@ -26,7 +20,6 @@ class InitialScreen {
     gameSound.setVolume(0.1, 0, 23)
     gameSound.setVolume(0.8, 4, 30)
     }
->>>>>>> addIntro
 
   draw() {
     this._background()

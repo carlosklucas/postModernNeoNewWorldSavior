@@ -1,10 +1,7 @@
 class Game {
   constructor() {
     this.index = 0;
-<<<<<<< HEAD
-=======
     //this.score = score;
->>>>>>> addIntro
     
     this.mapGame = tape.mapGame;
   }
@@ -27,13 +24,8 @@ class Game {
     enemies.push(statue)
     enemies.push(cop)
     enemies.push(sardine)
-<<<<<<< HEAD
-
-  }
-
-=======
     
-    gameSound.loop();
+    //gameSound.loop();
     
         if (sardine.appear()) {
      flyingSardineSound.play() 
@@ -42,7 +34,6 @@ class Game {
   }
 
   
->>>>>>> addIntro
   keyPressed(key) {
     if (key === 'ArrowUp') {
       console.log('The withch jumped!!!')
@@ -60,12 +51,6 @@ class Game {
       jumpSound.play();
     }
     
-<<<<<<< HEAD
-    if (sardine.appear()) {
-     flyingSardineSound.play() 
-    }
-=======
->>>>>>> addIntro
   }
 
   draw() {
@@ -100,20 +85,12 @@ class Game {
       //enemy.velocity = parseInt(random(10, 20));
     }
 
-<<<<<<< HEAD
-    if (character.isHitting(enemy)) {
-      live.loseLives();
-      if(live.lives <= 0) {
-      image(imageGameOver, width / 2 - 200, height / 3)
-=======
     
     if (character.isHitting(enemy)) {
 
       live.loseLives();
       if(live.lives <= 0) {
       image(imageGameOver, width / 2 - 200, height / 3)
-      gameSound.stop();
->>>>>>> addIntro
       noLoop()  
       }
        

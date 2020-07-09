@@ -16,11 +16,6 @@ class ButtonManagement {
     this.buttonM.mousePressed(() => this.changeScene())
   }
   
-<<<<<<< HEAD
-  changeScene() {
-    this.buttonM.remove()
-    currentScreen = 'game'
-=======
   //previousScenario() {currentScreen.remove();}
   
   changeScene() {
@@ -41,6 +36,5 @@ class ButtonManagement {
     //game.setup()
     welcome.stop();
     
->>>>>>> addIntro
   }
 }

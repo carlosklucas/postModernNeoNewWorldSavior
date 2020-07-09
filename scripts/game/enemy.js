@@ -19,11 +19,8 @@ class Enemy extends Animation {
     this.x = width;
   }
   
-<<<<<<< HEAD
-=======
   enemyImage(){
    this.image = this.image; 
   }
   
->>>>>>> addIntro
 }
