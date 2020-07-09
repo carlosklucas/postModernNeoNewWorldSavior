@@ -17,7 +17,13 @@ class ButtonManagement {
   }
   
   changeScene() {
-    this.buttonM.remove()
-    currentScreen = 'game'
+    this.buttonM.remove();
+    currentScreen = 'intro';
+    //intro.setup();
+        
+
+
+    welcome.stop();
+
   }
 }

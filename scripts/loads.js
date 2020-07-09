@@ -11,6 +11,8 @@ function preload() {
   imageLive = loadImage ('images/assets/live.png');
   fontInitialScreen = loadFont('images/assets/fontInitialScreen.otf');
   tape = loadJSON('tape/tape.json');
+  gameIntro = createVideo('videos/gameIntroPartI.mp4');
+  gameIntro.hide();
   
   gameSound = loadSound('sounds/gameSoundMalhao.mp3');
   welcome = loadSound('sounds/welcome.mp3');

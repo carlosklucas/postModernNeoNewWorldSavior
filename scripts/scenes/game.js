@@ -23,6 +23,7 @@ class Game {
     enemies.push(statue)
     enemies.push(cop)
     enemies.push(sardine)
+    gameSound.loop()
 
   }
 

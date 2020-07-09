@@ -12,6 +12,7 @@ let game;
 let tape;
 let welcomeSound;
 let flyingSardineSound;
+let gameIntro;
 
 let scenario;
 let gameSound;
