@@ -20,12 +20,12 @@ class Intro {
     gameIntro.show();
     //initialScreen.hide();
 
-    //setTimeout(() => {
-      //intro.stop();
-      //intro.hide();
-      //currentScreen = 'game';
-      //game.setup();
-    //}, 46000)
+    setTimeout(() => {
+      gameIntro.stop();
+      gameIntro.hide();
+      currentScreen = 'game';
+      game.setup();
+    }, 46000)
 
 
   }

@@ -25,7 +25,7 @@ class Game {
     enemies.push(cop)
     enemies.push(sardine)
     
-    //gameSound.loop();
+    gameSound.loop();
     
         if (sardine.appear()) {
      flyingSardineSound.play() 
