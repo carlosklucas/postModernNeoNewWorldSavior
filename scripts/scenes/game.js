@@ -92,6 +92,7 @@ class Game {
       live.loseLives();
       if(live.lives <= 0) {
       image(imageGameOver, width / 2 - 200, height / 3)
+      gameSound.stop();
       noLoop()  
       }
        
