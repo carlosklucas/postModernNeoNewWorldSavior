@@ -12,7 +12,7 @@ function setup() {
     game
   };
   //game.setup();
-  //initialScreen.setup()
+  initialScreen.setup()
   buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
   buttonIntro = new ButtonManagement('Skip intro', 500, 0);
   

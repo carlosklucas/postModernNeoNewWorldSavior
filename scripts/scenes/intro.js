@@ -20,8 +20,8 @@ class Intro {
   _imageVideo() {
     //gameIntro.background(220)
     //image(gameIntro, 0, 0, width, height);
-    //gameIntro.loop();
-    //gameIntro.show();
+    gameIntro.loop();
+    gameIntro.show();
     //initialScreen.hide();
 
     setTimeout(() => {
@@ -38,7 +38,7 @@ class Intro {
   }
   
   _button() {
-    buttonIntro.y = height - 570;
+    buttonIntro.y = height - 610;
     //buttonIntro.x = width -0;
     buttonIntro.draw()
     //buttonIntro.position(0, 0)
