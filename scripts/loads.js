@@ -17,7 +17,7 @@ function preload() {
   flyingSardineSound = loadSound('sounds/flyingSardine.mp3');
   jumpSound = loadSound('sounds/jump.mp3');
   
-    gameIntro = createVideo('videos/gameIntro.mp4');
+  gameIntro = createVideo('videos/gameIntro.mp4');
   gameIntro.hide();
   
 }

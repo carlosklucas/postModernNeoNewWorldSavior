@@ -5,7 +5,7 @@ class ButtonManagement {
     this.y = y;
     
     this.buttonM = createButton(this.textB)
-    this.nextState = 'game'
+    //this.nextState = 'game'
   }
   
   draw() {
@@ -24,17 +24,19 @@ class ButtonManagement {
       this.buttonM.remove()
       gameIntro.stop()
       gameIntro.hide()
-      game.setup();
       currentScreen = 'game'
-      return;
+      game.setup();
+      //buttonIntro.remove()
+
     }
 
+    else if (currentScreen === 'initialScreen') {
     this.buttonM.remove()
     currentScreen = 'intro'
     intro.setup();
     gameSound.stop();
     //game.setup()
     welcome.stop();
-    
+    }
   }
 }

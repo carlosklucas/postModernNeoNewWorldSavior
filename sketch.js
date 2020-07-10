@@ -4,6 +4,7 @@ function setup() {
   initialScreen = new InitialScreen();
   intro = new Intro();
   game = new Game();
+  gameIntro.size(windowWidth, windowHeight)
   
   scenes = {
     intro,
@@ -11,9 +12,9 @@ function setup() {
     game
   };
   //game.setup();
-  initialScreen.setup()
+  //initialScreen.setup()
   buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
-  buttonIntro = new ButtonManagement('Skip intro', width/14, height/2);
+  buttonIntro = new ButtonManagement('Skip intro', 500, 0);
   
 frameRate(40)
 //gameSound.loop();
