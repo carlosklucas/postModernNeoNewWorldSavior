@@ -7,6 +7,7 @@ class Game {
   }
 
   setup() {
+
     scenario = new Scenario(imageScenario, 3);
     score = new Score();
     live = new Live(tape.configs.maxLives, tape.configs.initialLives);
@@ -25,7 +26,7 @@ class Game {
     enemies.push(cop)
     enemies.push(sardine)
     
-    //gameSound.loop();
+    gameSound.loop();
     
         if (sardine.appear()) {
      flyingSardineSound.play() 
