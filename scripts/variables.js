@@ -13,6 +13,7 @@ let tape;
 let welcomeSound;
 let flyingSardineSound;
 let gameIntro;
+let ctx, ctxOn;
 
 let scenario;
 let gameSound;

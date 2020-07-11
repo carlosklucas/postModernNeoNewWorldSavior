@@ -16,6 +16,15 @@ function setup() {
   buttonManagement = new ButtonManagement('Start', width / 2, height / 2);
   buttonIntro = new ButtonManagement('Skip intro', 500, 0);
   
+  ctx = getAudioContext();
+  ctxOn = createButton('turn on Audio');
+  ctxOn.mousePressed(() => {
+  ctx.resume().then(() => {
+  console.log('Audio Context is now ON');
+      ctxOn.hide();
+  });
+});
+
 frameRate(40)
 //gameSound.loop();
   //welcome.play();

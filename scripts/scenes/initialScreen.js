@@ -52,7 +52,7 @@ class InitialScreen {
   }
   
   _button() {
-    buttonManagement.y = height / 7 * 5;
+    buttonManagement.y = height -610;
     buttonManagement.draw();
 
   }
